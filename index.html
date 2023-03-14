@@ -1,0 +1,85 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ЭЦП</title>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="script.js" defer></script>
+</head>
+
+<body>
+	<div class="panel">
+		<h3 class="panel__header"> Цифровая подпись</h3>
+		<div name="initialData" id="rsa" class=" initial-data">
+			<input type="text" name="text" id="text" class="initial-data__text" required style="display: none">
+			<br>
+			<div id="initialDataFiles">
+				<label style="margin-right: 15px;"> Отправить файл на ЭП </label><br>
+				<input type="file" id="dataLoad" class="button">
+			</div>
+			<div id="initialDataFiles">
+			</div>
+			<input type="submit" name="submit" id="encode" class="button" value="Подписать">
+			<br>
+			<label id="resultEncode" style="overflow: auto;"></label>
+
+			<!-- <div id="initialDataFiles">
+				<button id="dataSave" class="button">Сохранить подпись </button>
+			</div> -->
+			<div id="initialDataFiles">
+				<button id="keySave" class="button"> Сохранить ключи</button>
+			</div>
+			<!-- <br><br><br><br><br><br/><br/>
+			<div id="initialDataFiles">
+				<label style="margin-right: 37px;"> Загрузить подпись </label><br>
+				<input type="file" id="edsLoad" class="button">
+			</div>
+			<div id="initialDataFiles">
+				<label style="margin-right: 50px;"> Загрузить ключи </label><br>
+				<input type="file" id="keyLoad" class="button">
+			</div> -->
+		</div>
+	</div>
+	<div class="panel">
+		<h3 class="panel__header"> Проверить ЭЦП</h3>
+		<div name="initialData" id="rsa" class=" initial-data">
+			<label> Файл </label>
+			<input type="file" id="fileWithEds" class="button">
+			<label> Подпись </label>
+			<!-- <input type="file" id="eds" class="button"> -->
+			<input type="text" name="sign" id="sign" class="initial-data__text" required>
+			<input type="text" name="key" id="key" class="initial-data__text" required style="display: none">
+			<label style="display: none"> d </label>
+			<input type="text" name="dimensionsCount" id="d" class="initial-data__text" required style="display: none">
+			<label> n </label>
+			<input type="text" name="dimensionsCount" id="n-decode" class="initial-data__text" required>
+			<label> e </label>
+			<input type="text" name="dimensionsCount" id="e" class="initial-data__text" required>
+			<br>
+			<!-- <div id="initialDataFiles">
+				<button id="edsLoad" class="button">Загрузить подпись </button>
+			</div>
+			<div id="initialDataFiles">
+				<button id="keyLoad" class="button">Загрузить ключи</button>
+			</div> -->
+
+		
+			<!-- <div id="initialDataFiles">
+				<label style="margin-right: 35px;"> Загрузить подпись </label><br>
+				<input type="file" id="edsLoad" class="button">
+			</div> -->
+			<div id="initialDataFiles">
+				<label style="margin-right: 50px;"> Загрузить ключи </label><br>
+				<input type="file" id="keyLoad" class="button">
+			</div>
+			<br>
+			<input type="submit" name="submit" id="decode" class="button" value="Проверить подпись">
+			<label id="resultDecode" style="overflow: auto;"></label>
+			<label id="initialDataError">Ошибка</label>
+		</div>
+	</div>
+</body>
+
+</html>
